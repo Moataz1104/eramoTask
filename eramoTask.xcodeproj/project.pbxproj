@@ -13,6 +13,10 @@
 		005356A82BF2212F00D01060 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 005356A72BF2212F00D01060 /* Base */; };
 		005356B32BF222FD00D01060 /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005356B12BF222FD00D01060 /* SubjectsView.swift */; };
 		005356B42BF222FD00D01060 /* SubjectsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005356B22BF222FD00D01060 /* SubjectsView.xib */; };
+		005356B92BF2317100D01060 /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005356B72BF2317100D01060 /* SubjectCell.swift */; };
+		005356BA2BF2317100D01060 /* SubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005356B82BF2317100D01060 /* SubjectCell.xib */; };
+		005356BE2BF2545700D01060 /* InstructorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005356BC2BF2545700D01060 /* InstructorView.swift */; };
+		005356BF2BF2545700D01060 /* InstructorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005356BD2BF2545700D01060 /* InstructorView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		005356A92BF2212F00D01060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		005356B12BF222FD00D01060 /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
 		005356B22BF222FD00D01060 /* SubjectsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectsView.xib; sourceTree = "<group>"; };
+		005356B72BF2317100D01060 /* SubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
+		005356B82BF2317100D01060 /* SubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCell.xib; sourceTree = "<group>"; };
+		005356BC2BF2545700D01060 /* InstructorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorView.swift; sourceTree = "<group>"; };
+		005356BD2BF2545700D01060 /* InstructorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructorView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				005356B02BF222DD00D01060 /* SubjectsScreen */,
+				005356BB2BF2543300D01060 /* InstructorsView */,
+				005356B52BF2314200D01060 /* CustomCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -81,6 +91,32 @@
 				005356B22BF222FD00D01060 /* SubjectsView.xib */,
 			);
 			path = SubjectsScreen;
+			sourceTree = "<group>";
+		};
+		005356B52BF2314200D01060 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				005356B62BF2315400D01060 /* SubjectCell */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		005356B62BF2315400D01060 /* SubjectCell */ = {
+			isa = PBXGroup;
+			children = (
+				005356B72BF2317100D01060 /* SubjectCell.swift */,
+				005356B82BF2317100D01060 /* SubjectCell.xib */,
+			);
+			path = SubjectCell;
+			sourceTree = "<group>";
+		};
+		005356BB2BF2543300D01060 /* InstructorsView */ = {
+			isa = PBXGroup;
+			children = (
+				005356BC2BF2545700D01060 /* InstructorView.swift */,
+				005356BD2BF2545700D01060 /* InstructorView.xib */,
+			);
+			path = InstructorsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005356BF2BF2545700D01060 /* InstructorView.xib in Resources */,
+				005356BA2BF2317100D01060 /* SubjectCell.xib in Resources */,
 				005356A52BF2212F00D01060 /* Assets.xcassets in Resources */,
 				005356B42BF222FD00D01060 /* SubjectsView.xib in Resources */,
 				005356A82BF2212F00D01060 /* Base in Resources */,
@@ -154,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005356B92BF2317100D01060 /* SubjectCell.swift in Sources */,
 				005356B32BF222FD00D01060 /* SubjectsView.swift in Sources */,
 				0053569C2BF2212D00D01060 /* AppDelegate.swift in Sources */,
+				005356BE2BF2545700D01060 /* InstructorView.swift in Sources */,
 				0053569E2BF2212D00D01060 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

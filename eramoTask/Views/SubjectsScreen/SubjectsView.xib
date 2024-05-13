@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubjectsView" customModule="eramoTask" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="uBS-dy-4hf" id="AVb-gR-kXh"/>
+                <outlet property="nextButton" destination="d1c-mQ-oak" id="NZa-5f-d7o"/>
+                <outlet property="upperView" destination="H7Q-h7-i7T" id="afK-Sc-2Pn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,12 +21,81 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-h7-i7T">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="170.33333333333334"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-bx-EJC">
+                            <rect key="frame" x="85.333333333333329" y="102" width="222.33333333333337" height="48.333333333333343"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome moataz Mohamed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfN-sq-Jx2">
+                                    <rect key="frame" x="0.0" y="0.0" width="222.33333333333334" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please choose your subjects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBz-zk-6oo">
+                                    <rect key="frame" x="13.666666666666671" y="30.333333333333343" width="195" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstItem="3tf-bx-EJC" firstAttribute="centerX" secondItem="H7Q-h7-i7T" secondAttribute="centerX" id="KV9-0i-JYs"/>
+                        <constraint firstAttribute="bottom" secondItem="3tf-bx-EJC" secondAttribute="bottom" constant="20" id="YHK-eW-EVl"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uBS-dy-4hf">
+                    <rect key="frame" x="20" y="178" width="353" height="572"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cUq-Wp-IuP">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1c-mQ-oak">
+                    <rect key="frame" x="131.66666666666666" y="768" width="129.99999999999997" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5vY-9d-8Zs"/>
+                        <constraint firstAttribute="width" constant="130" id="RFv-ID-585"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="46W-hn-AQC"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBlueColor"/>
-            <point key="canvasLocation" x="45" y="20"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="d1c-mQ-oak" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="68s-dl-U1F"/>
+                <constraint firstItem="H7Q-h7-i7T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7sB-gd-fIm"/>
+                <constraint firstItem="uBS-dy-4hf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Fvu-mV-CEs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uBS-dy-4hf" secondAttribute="trailing" constant="20" id="IQM-q9-hXK"/>
+                <constraint firstItem="d1c-mQ-oak" firstAttribute="top" secondItem="uBS-dy-4hf" secondAttribute="bottom" constant="18" id="NzE-Yg-AUa"/>
+                <constraint firstItem="uBS-dy-4hf" firstAttribute="top" secondItem="H7Q-h7-i7T" secondAttribute="bottom" constant="7.6699999999999999" id="glL-ze-WZY"/>
+                <constraint firstItem="H7Q-h7-i7T" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="lcu-OK-gZU"/>
+                <constraint firstItem="H7Q-h7-i7T" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="tiQ-R5-qZ8"/>
+                <constraint firstItem="d1c-mQ-oak" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="uBd-al-BBw"/>
+                <constraint firstItem="H7Q-h7-i7T" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vis-Fn-AaX"/>
+            </constraints>
+            <point key="canvasLocation" x="43.511450381679388" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
