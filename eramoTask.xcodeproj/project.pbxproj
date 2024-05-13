@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		0053569C2BF2212D00D01060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053569B2BF2212D00D01060 /* AppDelegate.swift */; };
 		0053569E2BF2212D00D01060 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053569D2BF2212D00D01060 /* SceneDelegate.swift */; };
-		005356A02BF2212D00D01060 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053569F2BF2212D00D01060 /* ViewController.swift */; };
-		005356A32BF2212D00D01060 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 005356A22BF2212D00D01060 /* Base */; };
 		005356A52BF2212F00D01060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005356A42BF2212F00D01060 /* Assets.xcassets */; };
 		005356A82BF2212F00D01060 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 005356A72BF2212F00D01060 /* Base */; };
+		005356B32BF222FD00D01060 /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005356B12BF222FD00D01060 /* SubjectsView.swift */; };
+		005356B42BF222FD00D01060 /* SubjectsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005356B22BF222FD00D01060 /* SubjectsView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		005356982BF2212D00D01060 /* eramoTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eramoTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0053569B2BF2212D00D01060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0053569D2BF2212D00D01060 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0053569F2BF2212D00D01060 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		005356A22BF2212D00D01060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		005356A42BF2212F00D01060 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		005356A72BF2212F00D01060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		005356A92BF2212F00D01060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		005356B12BF222FD00D01060 /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
+		005356B22BF222FD00D01060 /* SubjectsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectsView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,31 @@
 		0053569A2BF2212D00D01060 /* eramoTask */ = {
 			isa = PBXGroup;
 			children = (
+				005356AF2BF222D100D01060 /* Views */,
 				0053569B2BF2212D00D01060 /* AppDelegate.swift */,
 				0053569D2BF2212D00D01060 /* SceneDelegate.swift */,
-				0053569F2BF2212D00D01060 /* ViewController.swift */,
-				005356A12BF2212D00D01060 /* Main.storyboard */,
 				005356A42BF2212F00D01060 /* Assets.xcassets */,
 				005356A62BF2212F00D01060 /* LaunchScreen.storyboard */,
 				005356A92BF2212F00D01060 /* Info.plist */,
 			);
 			path = eramoTask;
+			sourceTree = "<group>";
+		};
+		005356AF2BF222D100D01060 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				005356B02BF222DD00D01060 /* SubjectsScreen */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		005356B02BF222DD00D01060 /* SubjectsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				005356B12BF222FD00D01060 /* SubjectsView.swift */,
+				005356B22BF222FD00D01060 /* SubjectsView.xib */,
+			);
+			path = SubjectsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				005356A52BF2212F00D01060 /* Assets.xcassets in Resources */,
+				005356B42BF222FD00D01060 /* SubjectsView.xib in Resources */,
 				005356A82BF2212F00D01060 /* Base in Resources */,
-				005356A32BF2212D00D01060 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005356A02BF2212D00D01060 /* ViewController.swift in Sources */,
+				005356B32BF222FD00D01060 /* SubjectsView.swift in Sources */,
 				0053569C2BF2212D00D01060 /* AppDelegate.swift in Sources */,
 				0053569E2BF2212D00D01060 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		005356A12BF2212D00D01060 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				005356A22BF2212D00D01060 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		005356A62BF2212F00D01060 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,9 +304,9 @@
 				INFOPLIST_FILE = eramoTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +314,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.moataz.eramoTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,9 +335,9 @@
 				INFOPLIST_FILE = eramoTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +345,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.moataz.eramoTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
