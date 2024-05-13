@@ -24,6 +24,8 @@
 		005356D02BF2752C00D01060 /* InvoicesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005356CE2BF2752C00D01060 /* InvoicesView.xib */; };
 		005356D42BF287E200D01060 /* InvoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005356D22BF287E200D01060 /* InvoiceCell.swift */; };
 		005356D52BF287E200D01060 /* InvoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005356D32BF287E200D01060 /* InvoiceCell.xib */; };
+		005356D92BF29AB000D01060 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005356D72BF29AB000D01060 /* PaymentView.swift */; };
+		005356DA2BF29AB000D01060 /* PaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005356D82BF29AB000D01060 /* PaymentView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		005356CE2BF2752C00D01060 /* InvoicesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoicesView.xib; sourceTree = "<group>"; };
 		005356D22BF287E200D01060 /* InvoiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceCell.swift; sourceTree = "<group>"; };
 		005356D32BF287E200D01060 /* InvoiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceCell.xib; sourceTree = "<group>"; };
+		005356D72BF29AB000D01060 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		005356D82BF29AB000D01060 /* PaymentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				005356B02BF222DD00D01060 /* SubjectsScreen */,
-				005356BB2BF2543300D01060 /* InstructorsView */,
+				005356BB2BF2543300D01060 /* InstructorsScreen */,
 				005356CC2BF2750B00D01060 /* InvoicesScreen */,
+				005356D62BF29A6B00D01060 /* PaymentScreen */,
 				005356B52BF2314200D01060 /* CustomCells */,
 			);
 			path = Views;
@@ -128,13 +133,13 @@
 			path = SubjectCell;
 			sourceTree = "<group>";
 		};
-		005356BB2BF2543300D01060 /* InstructorsView */ = {
+		005356BB2BF2543300D01060 /* InstructorsScreen */ = {
 			isa = PBXGroup;
 			children = (
 				005356C02BF25F7C00D01060 /* InstructorsView.swift */,
 				005356C12BF25F7C00D01060 /* InstructorsView.xib */,
 			);
-			path = InstructorsView;
+			path = InstructorsScreen;
 			sourceTree = "<group>";
 		};
 		005356C42BF2645900D01060 /* InstructorCell */ = {
@@ -170,6 +175,15 @@
 				005356D32BF287E200D01060 /* InvoiceCell.xib */,
 			);
 			path = InvoicesCell;
+			sourceTree = "<group>";
+		};
+		005356D62BF29A6B00D01060 /* PaymentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				005356D72BF29AB000D01060 /* PaymentView.swift */,
+				005356D82BF29AB000D01060 /* PaymentView.xib */,
+			);
+			path = PaymentScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +250,7 @@
 				005356C82BF2647900D01060 /* InstructorCell.xib in Resources */,
 				005356C32BF25F7C00D01060 /* InstructorsView.xib in Resources */,
 				005356D52BF287E200D01060 /* InvoiceCell.xib in Resources */,
+				005356DA2BF29AB000D01060 /* PaymentView.xib in Resources */,
 				005356B42BF222FD00D01060 /* SubjectsView.xib in Resources */,
 				005356A82BF2212F00D01060 /* Base in Resources */,
 			);
@@ -251,6 +266,7 @@
 				005356CF2BF2752C00D01060 /* InvoicesView.swift in Sources */,
 				005356CB2BF26A1B00D01060 /* InstructorModel.swift in Sources */,
 				005356C22BF25F7C00D01060 /* InstructorsView.swift in Sources */,
+				005356D92BF29AB000D01060 /* PaymentView.swift in Sources */,
 				005356B92BF2317100D01060 /* SubjectCell.swift in Sources */,
 				005356C72BF2647900D01060 /* InstructorCell.swift in Sources */,
 				005356B32BF222FD00D01060 /* SubjectsView.swift in Sources */,

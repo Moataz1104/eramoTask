@@ -53,6 +53,7 @@ class InvoicesView: UIViewController {
     }
     
     @IBAction func confirmButtonAction(_ sender: Any) {
+        navigationController?.pushViewController(PaymentView(), animated: true)
     }
     
     
