@@ -39,7 +39,7 @@ class SubjectsView: UIViewController {
 //    MARK:  - Actions
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        navigationController?.pushViewController(InstructorView(), animated: true)
+        navigationController?.pushViewController(InstructorsView(), animated: true)
     }
     
 
