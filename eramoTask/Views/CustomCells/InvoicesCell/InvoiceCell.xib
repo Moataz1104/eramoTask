@@ -177,8 +177,8 @@
             <connections>
                 <outlet property="invoiceDetailsLabel" destination="jys-EI-1dr" id="scz-vD-DXc"/>
                 <outlet property="paymentDate" destination="L0I-EH-gZy" id="Mf6-LF-HZW"/>
-                <outlet property="teacherName" destination="QKE-mC-KG3" id="oKI-5F-aKw"/>
-                <outlet property="teacherSubject" destination="Vrr-27-fNi" id="NNX-Nh-b5d"/>
+                <outlet property="teacherName" destination="vl6-qU-Gal" id="Tju-I9-yjR"/>
+                <outlet property="teacherSubject" destination="7qZ-f5-c26" id="RLH-x8-aIq"/>
                 <outlet property="totalPrice" destination="2bH-ZI-6Xl" id="hsc-Je-dI4"/>
             </connections>
             <point key="canvasLocation" x="7.6335877862595414" y="100"/>

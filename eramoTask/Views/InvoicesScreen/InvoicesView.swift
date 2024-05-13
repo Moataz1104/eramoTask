@@ -12,6 +12,13 @@ class InvoicesView: UIViewController {
     
     let selectedInstructors : [InstructorModel]
     
+    lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter
+    }()
+
+    
 //    MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -65,6 +72,10 @@ class InvoicesView: UIViewController {
     private func registerCell(){
         tableView.register(UINib(nibName: InvoiceCell.identifier, bundle: nil), forCellReuseIdentifier: InvoiceCell.identifier)
     }
+    func getCurrentFormattedDate() -> String {
+        return dateFormatter.string(from: Date())
+    }
+
 }
 
 
@@ -80,6 +91,8 @@ extension InvoicesView : UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: InvoiceCell.identifier, for: indexPath) as! InvoiceCell
         cell.invoiceDetailsLabel.text = "Invoices (\(indexPath.item + 1)) Details"
         
+        let formattedDate = getCurrentFormattedDate()
+        cell.paymentDate.text = formattedDate
         cell.totalPrice.text = "\(selectedInstructors[indexPath.item].price)"
         cell.teacherName.text = selectedInstructors[indexPath.item].name
         cell.teacherSubject.text = selectedInstructors[indexPath.item].subject

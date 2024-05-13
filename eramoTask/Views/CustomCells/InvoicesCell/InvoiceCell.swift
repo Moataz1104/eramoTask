@@ -13,8 +13,9 @@ class InvoiceCell: UITableViewCell {
     
     @IBOutlet weak var invoiceDetailsLabel: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
-    @IBOutlet weak var teacherName: UILabel!
+
     @IBOutlet weak var teacherSubject: UILabel!
+    @IBOutlet weak var teacherName: UILabel!
     @IBOutlet weak var paymentDate: UILabel!
     
     override func awakeFromNib() {
