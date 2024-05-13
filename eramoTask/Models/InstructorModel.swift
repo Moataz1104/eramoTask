@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct InstructorModel {
+struct InstructorModel : Equatable {
     let name : String
     let price : Int
     let subject : String

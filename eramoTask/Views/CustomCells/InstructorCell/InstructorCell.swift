@@ -51,6 +51,7 @@ class InstructorCell: UICollectionViewCell {
         }else{
             bookLabel.text = "Book"
             bookLabel.backgroundColor = .blue
+            layer.borderWidth = 0
         }
         
     }

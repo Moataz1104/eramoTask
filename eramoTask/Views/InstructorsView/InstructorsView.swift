@@ -47,7 +47,6 @@ class InstructorsView: UIViewController {
         collectionView.collectionViewLayout = TwoColumnFlowLayout()
 
 
-
     }
     
     //    MARK:  - Actions
@@ -71,6 +70,10 @@ class InstructorsView: UIViewController {
     
     private func registerCell(){
         collectionView.register(UINib(nibName: InstructorCell.identifier, bundle: nil), forCellWithReuseIdentifier: InstructorCell.identifier)
+    }
+    
+    private func updateNextButtonEnabledState() {
+        nextButtonOutlet.isEnabled = !selectedInstructors.isEmpty
     }
 
     
@@ -98,9 +101,18 @@ extension InstructorsView:UICollectionViewDataSource, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? InstructorCell else {return}
+
+        if !cell.isBooked{
+            selectedInstructors.append(fakInstructors[indexPath.item])
+            updateNextButtonEnabledState()
             
-        selectedInstructors.append(fakInstructors[indexPath.item])
+        }else{
+            selectedInstructors.removeAll(where: {i in i == fakInstructors[indexPath.item]})
+            updateNextButtonEnabledState()
+        }
+        
         cell.configureBooking()
+
         
 
     }
