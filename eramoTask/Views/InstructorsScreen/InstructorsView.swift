@@ -42,6 +42,7 @@ class InstructorsView: UIViewController {
         registerCell()
         configUi()
         
+        updateNextButtonEnabledState()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = TwoColumnFlowLayout()
@@ -104,16 +105,15 @@ extension InstructorsView:UICollectionViewDataSource, UICollectionViewDelegateFl
 
         if !cell.isBooked{
             selectedInstructors.append(fakInstructors[indexPath.item])
-            updateNextButtonEnabledState()
             
         }else{
             selectedInstructors.removeAll(where: {i in i == fakInstructors[indexPath.item]})
-            updateNextButtonEnabledState()
         }
         
         cell.configureBooking()
 
-        
+        updateNextButtonEnabledState()
+
 
     }
     

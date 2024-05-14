@@ -31,11 +31,12 @@ class SubjectsView: UIViewController {
         collectionView.delegate = self
         collectionView.collectionViewLayout = TwoColumnFlowLayout()
 
+        nextButton.isEnabled = !selectedSubjects.isEmpty
         configUI()
 
         registerCell()
     }
-
+    
 //    MARK:  - Actions
     
     @IBAction func nextButtonAction(_ sender: Any) {
@@ -76,9 +77,9 @@ extension SubjectsView:UICollectionViewDataSource, UICollectionViewDelegateFlowL
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? SubjectCell else {
-            return
-        }
+        guard let cell = collectionView.cellForItem(at: indexPath) as? SubjectCell else {return}
+        
+
         cell.configSelection()
         if cell.isSelect{
             selectedSubjects.append(fakeSubjectsData[indexPath.item])
@@ -87,6 +88,8 @@ extension SubjectsView:UICollectionViewDataSource, UICollectionViewDelegateFlowL
         }
         
         print(selectedSubjects)
+        nextButton.isEnabled = !selectedSubjects.isEmpty
+
     }
     
 }

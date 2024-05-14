@@ -33,6 +33,7 @@ class PaymentView: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func confirmButtonAction(_ sender: Any) {
+        navigationController?.pushViewController(FinalScreen(), animated: true)
     }
     
 
